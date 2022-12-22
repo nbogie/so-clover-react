@@ -34,18 +34,36 @@ body {
 
 .oneCard {
   outline: 1px solid black;
-  padding: 1rem;
+  padding: 7rem;
   position: relative;
-  margin: 15rem;
+  margin: 2rem;
   font-size: 2rem;
-
+  user-select: none;
 }
 
 .oneCard div {
-  padding: 1rem;
   position: absolute;
+  padding: 1rem;
   display: grid;
   place-items: center;
+
+}
+
+.oneCard.rot0 {
+  transform: rotate(0deg);
+}
+
+.oneCard.rot1 {
+  transform: rotate(90deg);
+}
+
+.oneCard.rot2 {
+  transform: rotate(180deg);
+
+}
+
+.oneCard.rot3 {
+  transform: rotate(270deg);
 
 }
 
@@ -62,6 +80,7 @@ body {
 
 .oneCard div:nth-child(4n+3) {
   background: blue;
+  color: white;
   transform: rotate(180deg) translate(0, -5rem) translate(50%, 50%);
 }
 
