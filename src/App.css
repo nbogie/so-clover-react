@@ -3,9 +3,12 @@
   margin: 0 auto;
   padding: 2rem;
   text-align: center;
+  outline: 1px solid #333;
+  border-radius: 1rem;
 }
 
 :root {
+  background: #ece3d0;
   font-family: Inter, Avenir, Helvetica, Arial, sans-serif;
   font-size: 16px;
   line-height: 24px;
@@ -33,20 +36,26 @@ body {
 }
 
 .oneCard {
+  border-radius: 0.4rem;
+  transition: transform;
+  transition-duration: 400ms;
+
   outline: 1px solid black;
   padding: 7rem;
   position: relative;
   margin: 2rem;
   font-size: 2rem;
   user-select: none;
+  --cardspace: -6rem;
 }
 
 .oneCard div {
   position: absolute;
   padding: 1rem;
+  width: 1px;
+  height: 1px;
   display: grid;
-  place-items: center;
-
+  place-content: center;
 }
 
 .oneCard.rot0 {
@@ -68,24 +77,23 @@ body {
 }
 
 .oneCard div:nth-child(4n+1) {
-  background: red;
-  transform: rotate(0deg) translate(0%, -5rem) translate(-50%, -50%);
+  background: #f8f9f2;
+  transform: rotate(0deg) translate(0%, var(--cardspace)) translate(-50%, -50%);
 }
 
 .oneCard div:nth-child(4n+2) {
-  background: green;
-  transform: rotate(90deg) translate(0, -5rem) translate(-50%, 50%);
+  background: #A0D6DA;
+  transform: rotate(90deg) translate(0, var(--cardspace)) translate(-50%, 50%);
   ;
 }
 
 .oneCard div:nth-child(4n+3) {
-  background: blue;
-  color: white;
-  transform: rotate(180deg) translate(0, -5rem) translate(50%, 50%);
+  background: #1A86C8;
+  transform: rotate(180deg) translate(0, var(--cardspace)) translate(50%, 50%);
 }
 
 
 .oneCard div:nth-child(4n+4) {
-  background: yellow;
-  transform: rotate(270deg) translate(0, -5rem) translate(50%, -50%);
+  background: #f299a5;
+  transform: rotate(270deg) translate(0, var(--cardspace)) translate(50%, -50%);
 }
