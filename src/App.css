@@ -5,37 +5,68 @@
   text-align: center;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+:root {
+  font-family: Inter, Avenir, Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 400;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+body {
+  margin: 0;
+  display: flex;
+  place-items: center;
+  min-width: 320px;
+  min-height: 100vh;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+.oneClover {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
 }
 
-.card {
-  padding: 2em;
+.oneCard {
+  outline: 1px solid black;
+  padding: 1rem;
+  position: relative;
+  margin: 15rem;
+  font-size: 2rem;
+
 }
 
-.read-the-docs {
-  color: #888;
+.oneCard div {
+  padding: 1rem;
+  position: absolute;
+  display: grid;
+  place-items: center;
+
+}
+
+.oneCard div:nth-child(4n+1) {
+  background: red;
+  transform: rotate(0deg) translate(0%, -5rem) translate(-50%, -50%);
+}
+
+.oneCard div:nth-child(4n+2) {
+  background: green;
+  transform: rotate(90deg) translate(0, -5rem) translate(-50%, 50%);
+  ;
+}
+
+.oneCard div:nth-child(4n+3) {
+  background: blue;
+  transform: rotate(180deg) translate(0, -5rem) translate(50%, 50%);
+}
+
+
+.oneCard div:nth-child(4n+4) {
+  background: yellow;
+  transform: rotate(270deg) translate(0, -5rem) translate(50%, -50%);
 }
