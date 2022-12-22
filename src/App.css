@@ -33,6 +33,25 @@ body {
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr 1fr;
+  transition: transform;
+  transition-duration: 800ms;
+
+}
+
+.oneClover.rot0 {
+  transform: rotate(0deg);
+}
+
+.oneClover.rot1 {
+  transform: rotate(90deg);
+}
+
+.oneClover.rot2 {
+  transform: rotate(180deg);
+}
+
+.oneClover.rot3 {
+  transform: rotate(270deg);
 }
 
 .oneCard {
@@ -96,4 +115,61 @@ body {
 .oneCard div:nth-child(4n+4) {
   background: #f299a5;
   transform: rotate(270deg) translate(0, var(--cardspace)) translate(50%, -50%);
+}
+
+.outerWords {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 1px;
+  height: 1px;
+  display: grid;
+  place-content: center;
+  background: 'orange';
+  border: 10px solid red;
+}
+
+.outerWord {
+  position: absolute;
+  display: grid;
+  place-content: center;
+  width: 3px;
+  height: 3px;
+  white-space: nowrap;
+}
+
+.outerWord input {
+  font-size: 3rem;
+  padding: 1rem;
+  background: transparent;
+}
+
+.outerWord:nth-child(4n+1) {
+  background: red;
+  transform: rotate(0deg) translate(0, -20rem);
+
+}
+
+.outerWord:nth-child(4n+2) {
+  background: green;
+  transform: rotate(90deg) translate(0, -20rem);
+
+}
+
+.outerWord:nth-child(4n+3) {
+  background: skyblue;
+  transform: rotate(180deg) translate(0, -20rem);
+}
+
+.outerWord:nth-child(4n+4) {
+  background: yellow;
+  transform: rotate(270deg) translate(0, -20rem);
+}
+
+.rotateMainButton {
+  position: fixed;
+  top: 100px;
+  left: 100px;
+  padding: 1rem;
+  font-size: 1.6rem;
 }
