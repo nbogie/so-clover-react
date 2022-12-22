@@ -126,7 +126,7 @@ body {
   display: grid;
   place-content: center;
   background: 'orange';
-  border: 10px solid red;
+  /* border: 10px solid red; */
 }
 
 .outerWord {
@@ -166,10 +166,16 @@ body {
   transform: rotate(270deg) translate(0, -20rem);
 }
 
-.rotateMainButton {
+.bigButtons {
   position: fixed;
   top: 100px;
   left: 100px;
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  gap: 1rem;
+}
+
+button {
   padding: 1rem;
   font-size: 1.6rem;
 }
